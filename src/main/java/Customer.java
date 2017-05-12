@@ -5,20 +5,24 @@ import java.util.*;
 class Customer {
     private String name;
 
-    private Vector<Rental> rentals = new Vector<Rental>();
+    Vector<Rental> rentals = new Vector<Rental>();
     private double totalAmount;
     private int frequentRenterPoints;
 
-    public Customer (String newname){
+    Customer(String newname){
         name = newname;
     };
-    public void addRental(Rental arg) {
+
+    void addRental(Rental arg) {
+
         rentals.addElement(arg);
     };
-    public String getName (){
+
+    String getName(){
         return name;
     };
-    public String statement() {
+
+    String statement() {
         totalAmount = 0;
         frequentRenterPoints = 0;
         Enumeration<Rental> enum_rentals = rentals.elements();
@@ -38,13 +42,13 @@ class Customer {
         return result.toString();
     }
 
-    private String getHeader() {
+    protected String getHeader() {
         String result = String.format("Rental Record for %s\n", this.getName());
         result += "\tTitle\t\tDays\tAmount\n";
         return result;
     }
 
-    private String addFooter() {
+    protected String addFooter() {
         String result = "";
         result += String.format("Amount owed is %s\n", String.valueOf(totalAmount));
         result += String.format("You earned %s frequent renter points", String.valueOf(frequentRenterPoints));
