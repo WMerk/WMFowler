@@ -1,7 +1,8 @@
+import Prices.PriceChildrens;
+import Prices.PriceNewRelease;
+import Prices.PriceRegular;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by Merk Waldemar on 12.05.2017.

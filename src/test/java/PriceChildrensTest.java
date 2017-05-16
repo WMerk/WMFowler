@@ -1,8 +1,7 @@
+import Prices.PriceChildrens;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by Merk Waldemar on 12.05.2017.
@@ -14,7 +13,7 @@ class PriceChildrensTest {
         PriceChildrens priceChildrens = new PriceChildrens();
 
         Rental rental = new Rental(null,10);
-        double amount = priceChildrens.getAmount(rental);
+        double amount = priceChildrens.getAmount(rental.getDaysRented());
 
         double thisAmount = 1.5;
         if (rental.getDaysRented() > 3)

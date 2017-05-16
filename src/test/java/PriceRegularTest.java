@@ -1,7 +1,6 @@
+import Prices.PriceRegular;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by Merk Waldemar on 12.05.2017.
@@ -12,7 +11,7 @@ class PriceRegularTest {
         PriceRegular price = new PriceRegular();
 
         Rental rental = new Rental(null,10);
-        double amount = price.getAmount(rental);
+        double amount = price.getAmount(rental.getDaysRented());
 
         double thisAmount = 2;
         if (rental.getDaysRented() > 2)
