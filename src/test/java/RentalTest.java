@@ -17,10 +17,19 @@ class RentalTest {
 
     @Test
     void getMovie() {
+        Movie m1 = new Movie("Test",1);
+        Rental rental = new Rental(m1,10);
+
+        Assertions.assertEquals(m1,rental.getMovie());
     }
 
     @Test
     void toStringTest() {
+        int rentedDays = 10;
+        Movie m1 = new Movie("Test",1);
+        Rental rental = new Rental(m1, rentedDays);
+
+        Assertions.assertEquals("\tTest\t\t"+rentedDays,rental.toString());
     }
 
     @Test
