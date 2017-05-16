@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class PriceChildrensTest {
     @Test
+    @DisplayName("Get amount for 10 days rental")
     void getAmount() {
         PriceChildrens priceChildrens = new PriceChildrens();
 
@@ -22,6 +24,7 @@ class PriceChildrensTest {
     }
 
     @Test
+    @DisplayName("Get points depending on the rental type")
     void getRenterPoints() {
         PriceChildrens priceChildrens = new PriceChildrens();
         Assertions.assertEquals( 1 , priceChildrens.getRenterPoints());
