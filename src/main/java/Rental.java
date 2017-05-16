@@ -1,4 +1,4 @@
-class Rental {
+public class Rental {
     private Movie movie;
     private int daysRented;
 
@@ -23,10 +23,12 @@ class Rental {
     }
 
     public double getAmount() {
-        return getMovie().price.getAmount(this);
+
+        return getMovie().price.getAmount(daysRented);
     }
 
     public int getFrequentRenterPoints() {
+
         return getMovie().price.getRenterPoints();
     }
 }
